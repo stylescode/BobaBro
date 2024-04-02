@@ -1,0 +1,28 @@
+{
+  "name": "bobabro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js",
+    "react-dev": "npx webpack --watch",
+    "server-dev": "nodemon server/index.js"
+  },
+  "keywords": [],
+  "author": "Styles Kim",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.91.0",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.3"
+  }
+}
