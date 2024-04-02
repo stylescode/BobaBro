@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import React from 'react';
 import Header from './header';
-import Main from './main/main';
+import Home from './home/home';
 import Business from './business/business';
 import Profile from './profile/profile';
 
@@ -17,13 +17,13 @@ const App: React.FC = () => {
   const renderPage = () => {
     switch (currentPage) {
       case 'main':
-        return <Main />;
+        return <Home />;
       case 'business':
         return <Business changePage={changePage} />;
       case 'profile':
         return <Profile />;
       default:
-        return <Main />;
+        return <Home />;
     }
   }
 
