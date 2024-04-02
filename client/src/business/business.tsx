@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Business: React.FC = () => {
+interface BusinessProps {
+
+}
+
+const Business = ({}: BusinessProps) => {
   return (
     <div>BUSINESS PAGE</div>
   );

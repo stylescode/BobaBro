@@ -5,10 +5,10 @@ import Home from './home/home';
 import Business from './business/business';
 import Profile from './profile/profile';
 
-const App: React.FC = () => {
+const App = () => {
 
-  type Page = 'main' | 'business' | 'profile';
-  const [currentPage, setCurrentPage] = useState('main');
+  type Page = 'home' | 'business' | 'profile';
+  const [currentPage, setCurrentPage] = useState('home');
 
   const changePage = (page: Page) => {
     setCurrentPage(page);
@@ -16,10 +16,10 @@ const App: React.FC = () => {
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'main':
+      case 'home':
         return <Home />;
       case 'business':
-        return <Business changePage={changePage} />;
+        return <Business />;
       case 'profile':
         return <Profile />;
       default:
@@ -29,7 +29,7 @@ const App: React.FC = () => {
 
   return (
     <div id="app-container">
-      <Header />
+      <Header changePage={changePage} />
       {renderPage()}
     </div>
   );

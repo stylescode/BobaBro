@@ -1,8 +1,15 @@
 import React from 'react';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  changePage: Function;
+}
+const Header = ({ changePage }: HeaderProps) => {
+
   return (
-    <div>HEADER</div>
+    <div id="header">
+      <h1 onClick={() => changePage('home')}>BobaBro</h1>
+      <div onClick={() => changePage('profile')}>PROFILE ICON</div>
+    </div>
   );
 }
 
