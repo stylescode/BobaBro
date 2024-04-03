@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface SearchProps {
-
+  changeLocation: Function;
 }
 
-const Search = ({}: SearchProps) => {
+const Search = ({ changeLocation }: SearchProps) => {
+
+  const [input, setInput] = useState('');
+
   return (
     <div id="search-container">
-      <input type="text" placeholder="Search for boba places..."/>
-      <button>Search</button>
+      <input onChange={(e) => setInput(e.target.value)} type="text" placeholder="Search for boba places..."/>
+      <button onClick={() => changeLocation(input)}>Search</button>
     </div>
   );
 }
