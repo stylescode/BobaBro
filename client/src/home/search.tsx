@@ -10,7 +10,7 @@ const Search = ({ changeLocation }: SearchProps) => {
 
   return (
     <div id="search-container">
-      <input onChange={(e) => setInput(e.target.value)} type="text" placeholder="Search for boba places..."/>
+      <input onChange={(e) => setInput(e.target.value)} type="text" placeholder="Enter a location..."/>
       <button onClick={() => changeLocation(input)}>Search</button>
     </div>
   );
