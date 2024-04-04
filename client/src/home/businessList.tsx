@@ -17,7 +17,7 @@ const BusinessList = ({ bobaShops, changePage }: BusinessListProps) => {
     } else {
       return bobaShops.map((shop, index) => {
         return (
-          <div key={index} className="listItem" onClick={() => changePage(shop)}>
+          <div key={index} className="listItem" onClick={() => changePage('business', bobaShops[index])}>
             <h3>{shop.name}</h3>
             <p>{shop.vicinity}</p>
           </div>
@@ -28,7 +28,7 @@ const BusinessList = ({ bobaShops, changePage }: BusinessListProps) => {
 
   return (
     <div id="business-list">
-      BUSINESS LIST
+      LOCATIONS:
       {renderShops()}
     </div>
   );
