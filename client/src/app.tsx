@@ -9,21 +9,26 @@ const App = () => {
 
   type Page = 'home' | 'business' | 'profile';
   const [currentPage, setCurrentPage] = useState('home');
+  const [selectedShop, setSelectedShop] = useState({});
 
-  const changePage = (page: Page) => {
+  const changePage = (page: Page, shop?: {}) => {
+    console.log('single shop:', shop);
     setCurrentPage(page);
+    if (shop) {
+      setSelectedShop(shop);
+    }
   };
 
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <Home />;
+        return <Home changePage={changePage}/>;
       case 'business':
-        return <Business />;
+        return <Business shop={selectedShop}/>;
       case 'profile':
         return <Profile />;
       default:
-        return <Home />;
+        return <Home changePage={changePage}/>;
     }
   }
 
