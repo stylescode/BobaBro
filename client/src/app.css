@@ -1,0 +1,9 @@
+#app-container {
+  color: white;
+  font-family: "Reddit Mono";
+  font-weight: 300;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
