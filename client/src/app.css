@@ -1,9 +1,26 @@
 #app-container {
-  color: white;
+  color: rgb(221, 0, 0);
   font-family: "Reddit Mono";
   font-weight: 300;
-
+  background-color: rgba(48, 48, 48, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /* Ensure relative positioning for proper pseudo-element positioning */
+  overflow: hidden;
+}
+
+#app-container::before {
+  content: "";
+  position: absolute;
+  top: -50%; /* Adjust to cover the entire page after rotation */
+  left: -50%; /* Adjust to cover the entire page after rotation */
+  width: 200%; /* Adjust to cover the entire page after rotation */
+  height: 200%; /* Adjust to cover the entire page after rotation */
+  background-image: url('../../img/boba_tea_drink_icon_141534.png');
+  background-repeat: repeat;
+  background-attachment: absolute;
+  opacity: 0.5;
+  z-index: -1;
+  transform: rotate(45deg);
 }

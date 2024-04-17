@@ -1,6 +1,38 @@
+#business-list {
+  margin-top: 20px;
+}
+
 .listItem {
-  border: 2px solid white;
+  box-shadow: 4px 4px 0px 3px #000000;
+  background-color: rgb(243, 243, 243);
   border-radius: 10px;
+  font-size: 20px;
   margin-bottom: 20px;
-  width: 800px;
+  padding:6px 40px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.listItem:hover {
+  background-color: rgb(221, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+
+.itemInfo {
+  border-right: solid 2px black;
+  width: 620px;
+}
+
+.itemInfo h3,
+.itemInfo p {
+  margin: 0;
+}
+
+.itemKeyPhoto {
+  padding-left: 30px;
+  width: 140px;
+  height: 80px;
+  object-fit: cover;
 }

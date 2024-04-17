@@ -1,0 +1,19 @@
+#business-page {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 400px;
+}
+
+.topSection {
+  display: flex;
+  gap: 10%;
+}
+
+.icon {
+  font-size: 40px;
+  margin: 10px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}

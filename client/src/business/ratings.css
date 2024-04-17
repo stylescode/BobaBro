@@ -1,0 +1,6 @@
+#ratings-component {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5em;
+    margin-top: 20px;
+}

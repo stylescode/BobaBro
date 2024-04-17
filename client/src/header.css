@@ -7,7 +7,16 @@
   align-items: center;
 }
 
+#header h1:hover {
+  cursor: pointer;
+
+}
+
 .header-icon {
-  color: white;
+  color: rgb(221, 0, 0);
+}
+
+.header-icon:hover {
+  cursor: pointer;
 }
 
