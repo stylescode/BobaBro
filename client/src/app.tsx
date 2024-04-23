@@ -4,12 +4,14 @@ import Header from './header';
 import Home from './home/home';
 import Business from './business/business';
 import Profile from './profile/profile';
+import './app.css';
 
 const App = () => {
 
   type Page = 'home' | 'business' | 'profile';
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedShop, setSelectedShop] = useState({});
+  const [user, setUser] = useState({});
 
   const changePage = (page: Page, shop?: {}) => {
     console.log('single shop:', shop);
@@ -26,7 +28,7 @@ const App = () => {
       case 'business':
         return <Business shop={selectedShop}/>;
       case 'profile':
-        return <Profile />;
+        return <Profile changePage={changePage}/>;
       default:
         return <Home changePage={changePage}/>;
     }
