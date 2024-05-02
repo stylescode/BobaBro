@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Search from './search';
 import BusinessList from './businessList';
-
-declare var google: any;
+import './home.css';
 
 interface HomeProps {
   changePage: Function;
@@ -35,6 +34,7 @@ const Home = ({ changePage }: HomeProps) => {
   return (
     <div id="home-page">
       <Search changeLocation={changeLocation}/>
+      LOCATIONS:
       <BusinessList bobaShops={bobaShops} changePage={changePage}/>
     </div>
   );
